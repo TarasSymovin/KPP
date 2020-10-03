@@ -50,7 +50,6 @@ public class Shoes{
     public void setSize(int size) {
         this.size = size;
     }
-
     public double getPrice() {
         return price;
     }

@@ -11,27 +11,10 @@ public class Main {
         Shoes shoes2 = new Shoes("Jordan", 39, 1000, "Blue");
         Shoes shoes4 = new Shoes("Nike", 38, 3600, "Yellow");
 
-        ArrayList<Shoes> list = new ArrayList<>();
+        User user = new DefaultUser("Taras", "Symovin");
 
-        list.add(shoes);
-        list.add(shoes1);
-        list.add(shoes2);
-        list.add(shoes4);
-
-        ShoesManager shoesManager = new ShoesManager(list);
-        shoesManager.sortBySizeDown();
-        shoesManager.printListOfShoes();
-
-        System.out.println();
-        shoesManager.sortByPriceDown();
-        shoesManager.printListOfShoes();
-
-        System.out.println();
-        shoesManager.sortByNameDown();
-        shoesManager.printListOfShoes();
-
-        System.out.println();
-        shoesManager.sortByColorDown();
-        shoesManager.printListOfShoes();
+        user.addToCart(shoes);
+        user.recharge(8000);
+        user.pay();
     }
 }
