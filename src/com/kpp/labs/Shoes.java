@@ -1,5 +1,64 @@
 package com.kpp.labs;
 
-public interface Shoes {
-    void printParam();
+import java.util.Comparator;
+
+public class Shoes{
+    private String name;
+    private int size;
+    private double price;
+
+    public Shoes() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "SummerShoes{" +
+                "name='" + name + '\'' +
+                ", size=" + size +
+                ", price=" + price +
+                '}';
+    }
+
+    public class ShoesSizeComparator implements Comparator<Shoes> {
+
+        @Override
+        public int compare(Shoes o1, Shoes o2) {
+            return o1.size - o2.size;
+        }
+    }
+
+    public Shoes(String name, int size, double price) {
+        this.name = name;
+        this.size = size;
+        this.price = price;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+
 }
