@@ -6,15 +6,17 @@ public class Shoes{
     private String name;
     private int size;
     private double price;
+    private String color;
 
     public Shoes() {
 
     }
 
-    public Shoes(String name, int size, double price) {
+    public Shoes(String name, int size, double price, String color) {
         this.name = name;
         this.size = size;
         this.price = price;
+        this.color = color;
     }
 
     public class ShoesSizeComparator implements Comparator<Shoes> {
@@ -57,12 +59,21 @@ public class Shoes{
         this.price = price;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public String toString() {
         return "SummerShoes{" +
                 "name='" + name + '\'' +
                 ", size=" + size +
                 ", price=" + price +
+                ", color=" + color +
                 '}';
     }
 }
