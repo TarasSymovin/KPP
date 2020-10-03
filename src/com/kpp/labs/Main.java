@@ -6,9 +6,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        Shoes shoes = new Shoes("Кроси adidas", 42, 1300);
-        Shoes shoes1 = new Shoes("sscs", 41, 3000);
-        Shoes shoes2 = new Shoes("sscs", 39, 3000);
+        Shoes shoes = new Shoes("Adidas", 42, 1300);
+        Shoes shoes1 = new Shoes("Puma", 41, 3000);
+        Shoes shoes2 = new Shoes("Jordan", 39, 3000);
         Shoes shoes4 = new Shoes("Nike", 38, 3600);
 
         ArrayList<Shoes> list = new ArrayList<>();
