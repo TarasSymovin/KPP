@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         Shoes shoes = new Shoes("Adidas", 42, 1300);
-        Shoes shoes1 = new Shoes("Puma", 41, 3000);
-        Shoes shoes2 = new Shoes("Jordan", 39, 3000);
+        Shoes shoes1 = new Shoes("Puma", 41, 2000);
+        Shoes shoes2 = new Shoes("Jordan", 39, 1000);
         Shoes shoes4 = new Shoes("Nike", 38, 3600);
 
         ArrayList<Shoes> list = new ArrayList<>();
@@ -19,6 +19,14 @@ public class Main {
         list.add(shoes4);
 
         ShoesManager shoesManager = new ShoesManager(list);
+        shoesManager.sortBySize();
+        shoesManager.printListOfShoes();
+
+        System.out.println();
+        shoesManager.sortByPrice();
+        shoesManager.printListOfShoes();
+
+        System.out.println();
         shoesManager.sortByName();
         shoesManager.printListOfShoes();
     }

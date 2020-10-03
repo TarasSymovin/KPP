@@ -11,13 +11,10 @@ public class Shoes{
 
     }
 
-    @Override
-    public String toString() {
-        return "SummerShoes{" +
-                "name='" + name + '\'' +
-                ", size=" + size +
-                ", price=" + price +
-                '}';
+    public Shoes(String name, int size, double price) {
+        this.name = name;
+        this.size = size;
+        this.price = price;
     }
 
     public class ShoesSizeComparator implements Comparator<Shoes> {
@@ -28,12 +25,13 @@ public class Shoes{
         }
     }
 
-    public Shoes(String name, int size, double price) {
-        this.name = name;
-        this.size = size;
-        this.price = price;
-    }
+    public static class ShoesPriceComparator implements Comparator<Shoes>{
 
+        @Override
+        public int compare(Shoes o1, Shoes o2) {
+            return (int) (o1.price - o2.price);
+        }
+    }
 
     public String getName() {
         return name;
@@ -47,7 +45,6 @@ public class Shoes{
         return size;
     }
 
-
     public void setSize(int size) {
         this.size = size;
     }
@@ -60,5 +57,12 @@ public class Shoes{
         this.price = price;
     }
 
-
+    @Override
+    public String toString() {
+        return "SummerShoes{" +
+                "name='" + name + '\'' +
+                ", size=" + size +
+                ", price=" + price +
+                '}';
+    }
 }
