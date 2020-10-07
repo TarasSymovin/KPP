@@ -60,6 +60,7 @@ public class Shoes implements Product{
     public void setSize(int size) {
         this.size = size;
     }
+
     public double getPrice() {
         return price;
     }
@@ -78,12 +79,10 @@ public class Shoes implements Product{
 
     @Override
     public String toString() {
-        return "SummerShoes{" +
-                "id=" + id +
-                " name='" + name + '\'' +
-                ", size=" + size +
-                ", price=" + price +
-                ", color=" + color +
-                '}';
+        return  "id: " + id +
+                " Назва: '" + name + '\'' +
+                "; Розмір: " + size +
+                "; Ціна: " + price +
+                "; Колір: " + color;
     }
 }
