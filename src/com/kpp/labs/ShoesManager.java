@@ -5,10 +5,24 @@ import java.util.Collections;
 import java.util.List;
 
 public class ShoesManager implements Manager {
-    private ArrayList<Shoes> shoes;
+    private List<Shoes> shoes;
 
-    public ShoesManager(ArrayList<Shoes> shoes) {
-        this.shoes = shoes;
+    public ShoesManager() {
+        this.shoes = new ArrayList<>();
+    }
+
+    @Override
+    public void addProduct(Product product) {
+        shoes.add((Shoes) product);
+    }
+
+    @Override
+    public void removeProduct(int id) {
+        for (Shoes sh : shoes){
+            if (sh.getId() == id){
+                shoes.remove(shoes.indexOf(sh));
+            }
+        }
     }
 
     @Override

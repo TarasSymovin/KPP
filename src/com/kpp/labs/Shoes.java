@@ -2,7 +2,8 @@ package com.kpp.labs;
 
 import java.util.Comparator;
 
-public class Shoes{
+public class Shoes implements Product{
+    private int id;
     private String name;
     private int size;
     private double price;
@@ -12,11 +13,20 @@ public class Shoes{
 
     }
 
-    public Shoes(String name, int size, double price, String color) {
+    public Shoes(int id, String name, int size, double price, String color) {
+        this.id = id;
         this.name = name;
         this.size = size;
         this.price = price;
         this.color = color;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public class ShoesSizeComparator implements Comparator<Shoes> {
@@ -69,7 +79,8 @@ public class Shoes{
     @Override
     public String toString() {
         return "SummerShoes{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                " name='" + name + '\'' +
                 ", size=" + size +
                 ", price=" + price +
                 ", color=" + color +
