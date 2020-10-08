@@ -11,6 +11,17 @@ public class ShoesManager implements Manager {
         this.shoes = new ArrayList<>();
     }
 
+    public void changeBySexType(SexType sexType){
+        int count = 1;
+
+        for (Shoes sh : shoes){
+            if (sh.getSexType() == sexType){
+                System.out.print(count++ + ") ");
+                System.out.println(sh);
+            }
+        }
+    }
+
     @Override
     public void addProduct(Product product) {
         shoes.add((Shoes) product);
@@ -18,11 +29,13 @@ public class ShoesManager implements Manager {
 
     @Override
     public void removeProduct(int id) {
+        Shoes deletedShoes = new Shoes();
         for (Shoes sh : shoes){
             if (sh.getId() == id){
-                shoes.remove(shoes.indexOf(sh));
+                deletedShoes = sh;
             }
         }
+        shoes.remove(deletedShoes);
     }
 
     @Override
@@ -77,7 +90,9 @@ public class ShoesManager implements Manager {
     }
 
     public void printListOfProducts(){
+        System.out.println("--------------------------------------------------------------");
         for (Shoes o : shoes)
             System.out.println(o);
+        System.out.println("--------------------------------------------------------------");
     }
 }

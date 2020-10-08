@@ -8,17 +8,19 @@ public class Shoes implements Product{
     private int size;
     private double price;
     private String color;
+    private SexType sexType;
 
     public Shoes() {
 
     }
 
-    public Shoes(int id, String name, int size, double price, String color) {
+    public Shoes(int id, String name, int size, double price, String color, SexType sexType) {
         this.id = id;
         this.name = name;
         this.size = size;
         this.price = price;
         this.color = color;
+        this.sexType = sexType;
     }
 
     public int getId() {
@@ -77,12 +79,21 @@ public class Shoes implements Product{
         this.color = color;
     }
 
+    public SexType getSexType() {
+        return sexType;
+    }
+
+    public void setSexType(SexType sexType) {
+        this.sexType = sexType;
+    }
+
     @Override
     public String toString() {
         return  "id: " + id +
                 " Назва: '" + name + '\'' +
                 "; Розмір: " + size +
                 "; Ціна: " + price +
-                "; Колір: " + color;
+                "; Колір: " + color +
+                "; " + sexType + ";";
     }
 }
