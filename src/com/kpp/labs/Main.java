@@ -18,6 +18,8 @@ public class Main {
         manager.addProduct(shoes2);
         manager.addProduct(shoes4);
         manager.printListOfProducts();
+        manager.sortBySize(true);
+        manager.printListOfProducts();
         manager.removeProduct(shoes1.getId());
         manager.printListOfProducts();
         ((ShoesManager)manager).changeBySexType(SexType.FEMALE);
